@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>우리의 저녁 약속</title>
+    <link rel="stylesheet" href="date.css">
+</head>
+
+<body>
+
+    <div class="deco deco1">♡</div>
+    <div class="deco deco2">✦</div>
+    <div class="deco deco3">🌷</div>
+
+    <div class="date-container">
+
+        <div class="calendar-emoji">📅</div>
+
+        <h1>우리 언제 만날까요?</h1>
+
+        <p class="subtitle">
+            엄마 아빠와 함께할 날짜를 골라주세요 ♡
+        </p>
+
+
+        <div class="calendar">
+
+            <h2>2026년 10월</h2>
+
+            <div class="week">
+                <span class="sun">일</span>
+                <span>월</span>
+                <span>화</span>
+                <span>수</span>
+                <span>목</span>
+                <span>금</span>
+                <span class="sat">토</span>
+            </div>
+
+
+            <div class="days">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <button onclick="selectDate(this, 1)">1</button>
+                <button onclick="selectDate(this, 2)">2</button>
+                <button onclick="selectDate(this, 3)">3</button>
+
+                <button onclick="selectDate(this, 4)">4</button>
+                <button onclick="selectDate(this, 5)">5</button>
+                <button onclick="selectDate(this, 6)">6</button>
+                <button onclick="selectDate(this, 7)">7</button>
+                <button onclick="selectDate(this, 8)">8</button>
+                <button onclick="selectDate(this, 9)">9</button>
+                <button onclick="selectDate(this, 10)">10</button>
+
+                <button onclick="selectDate(this, 11)">11</button>
+                <button onclick="selectDate(this, 12)">12</button>
+                <button onclick="selectDate(this, 13)">13</button>
+                <button onclick="selectDate(this, 14)">14</button>
+                <button onclick="selectDate(this, 15)">15</button>
+                <button onclick="selectDate(this, 16)">16</button>
+                <button onclick="selectDate(this, 17)">17</button>
+
+                <button onclick="selectDate(this, 18)">18</button>
+                <button onclick="selectDate(this, 19)">19</button>
+                <button onclick="selectDate(this, 20)">20</button>
+                <button onclick="selectDate(this, 21)">21</button>
+                <button onclick="selectDate(this, 22)">22</button>
+                <button onclick="selectDate(this, 23)">23</button>
+                <button onclick="selectDate(this, 24)">24</button>
+
+                <button onclick="selectDate(this, 25)">25</button>
+                <button onclick="selectDate(this, 26)">26</button>
+                <button onclick="selectDate(this, 27)">27</button>
+                <button onclick="selectDate(this, 28)">28</button>
+                <button onclick="selectDate(this, 29)">29</button>
+                <button onclick="selectDate(this, 30)">30</button>
+                <button onclick="selectDate(this, 31)">31</button>
+
+            </div>
+
+        </div>
+
+
+        <p id="selectedText">
+            원하는 날짜를 선택해주세요 💗
+        </p>
+
+
+        <button class="reserve-button" onclick="reserve()">
+            이날로 예약하기 ♡
+        </button>
+
+    </div>
+
+
+    <!-- 예약 완료 팝업 -->
+
+    <div id="completePopup" class="popup">
+
+        <div class="complete-box">
+
+    <div class="complete-heart">💗</div>
+
+    <p class="complete-small">
+        RESERVATION COMPLETE
+    </p>
+
+    <h2>예약 완료!</h2>
+
+    <p>
+        엄마 아빠와 함께하는<br>
+        저녁 식사가 예약되었습니다 🍽️
+    </p>
+
+    <div id="finalDate" class="final-date"></div>
+
+    <p class="final-message">
+        그럼 이날 만나요 ♡
+    </p>
+
+    <a href="ending.html" class="ending-button">
+        마지막 편지 보기 💌
+    </a>
+
+</div>
+
+    </div>
+
+
+    <script>
+
+        var selectedDate = 0;
+
+
+        function selectDate(button, date) {
+
+            var buttons = document.querySelectorAll(".days button");
+
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("selected");
+            }
+
+
+            button.classList.add("selected");
+
+            selectedDate = date;
+
+
+            document.getElementById("selectedText").innerHTML =
+                "💗 2026년 10월 " + date + "일을 선택하셨습니다.";
+        }
+
+
+        function reserve() {
+
+            if (selectedDate == 0) {
+
+                alert("먼저 날짜를 선택해주세요 ♡");
+
+            }
+
+            else {
+
+                document.getElementById("finalDate").innerHTML =
+                    "📅 2026년 10월 " + selectedDate + "일";
+
+
+                document.getElementById("completePopup").style.display =
+                    "flex";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

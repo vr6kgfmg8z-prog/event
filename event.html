@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>엄마 아빠를 위한 선물</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+
+<body>
+
+    <div class="deco deco1">🎀</div>
+    <div class="deco deco2">♡</div>
+    <div class="deco deco3">✦</div>
+    <div class="deco deco4">♡</div>
+
+    <div class="event-container">
+
+        <div class="gift">🎁</div>
+
+        <h1>엄마 아빠를 위한 선물</h1>
+
+        <p class="subtitle">
+            딸래미가 준비한 선물이 있어요 ♡<br>
+            마음에 드는 선물 하나를 골라주세요!
+        </p>
+
+
+        <div class="gift-container">
+
+            <div class="gift-card" onclick="wrongChoice(1)">
+
+                <div class="emoji">🚘</div>
+
+                <h2>벤츠 사주기</h2>
+
+                <p>
+                    엄마 아빠를 위한<br>
+                    멋진 벤츠 한 대!
+                </p>
+
+                <button>이걸로 할래!</button>
+
+            </div>
+
+
+            <div class="gift-card special" onclick="rightChoice()">
+
+                <div class="emoji">🍽️</div>
+
+                <h2>딸래미의<br>저녁 식사 대접</h2>
+
+                <p>
+                    맛있는 음식 먹으면서<br>
+                    행복한 시간 보내기 ♡
+                </p>
+
+                <button>이걸로 할래!</button>
+
+            </div>
+
+
+            <div class="gift-card" onclick="wrongChoice(3)">
+
+                <div class="emoji">🏠</div>
+
+                <h2>집 한 채 사주기</h2>
+
+                <p>
+                    엄마 아빠를 위한<br>
+                    멋진 집 한 채!
+                </p>
+
+                <button>이걸로 할래!</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="popup" class="popup">
+
+        <div class="popup-box">
+
+            <div id="popupEmoji" class="popup-emoji">🥹</div>
+
+            <h2 id="popupTitle">잠깐만요!</h2>
+
+            <p id="popupMessage"></p>
+
+            <button onclick="closePopup()">
+                다시 고르기 ♡
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function wrongChoice(number) {
+
+            if (number == 1) {
+
+                document.getElementById("popupEmoji").innerHTML = "🚘🥹";
+
+                document.getElementById("popupTitle").innerHTML =
+                    "잠깐만요!";
+
+                document.getElementById("popupMessage").innerHTML =
+                    "엄마 아빠...<br>딸래미의 통장 잔액을 생각해주세요...<br><br>다시 한 번 골라볼까요? ♡";
+            }
+
+            else {
+
+                document.getElementById("popupEmoji").innerHTML = "🏠🥺";
+
+                document.getElementById("popupTitle").innerHTML =
+                    "이건 조금만 기다려주세요!";
+
+                document.getElementById("popupMessage").innerHTML =
+                    "엄마 아빠... 집은 제가 취업하고 나서<br>다시 이야기하는 걸로 해요 ㅎㅎ<br><br>다른 선물을 골라주세요 ♡";
+            }
+
+            document.getElementById("popup").style.display = "flex";
+        }
+
+
+        function closePopup() {
+
+            document.getElementById("popup").style.display = "none";
+
+        }
+
+
+        function rightChoice() {
+
+            window.location.href = "date.html";
+
+        }
+
+    </script>
+
+</body>
+</html>

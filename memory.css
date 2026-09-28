@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    background: linear-gradient(135deg, #f5e7ff, #ffe7f0);
+
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+.memory-container {
+    width: 950px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.camera {
+    font-size: 45px;
+}
+
+
+h1 {
+    color: #66536e;
+
+    font-size: 31px;
+
+    margin: 12px 0;
+}
+
+
+.subtitle {
+    color: #9b789d;
+
+    font-size: 16px;
+
+    margin-bottom: 55px;
+}
+
+
+.photo-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+.polaroid {
+    width: 235px;
+
+    padding: 13px 13px 25px;
+
+    background-color: white;
+
+    box-shadow: 0 10px 25px rgba(100, 70, 110, 0.2);
+
+    transition: 0.3s;
+}
+
+
+.polaroid img {
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.polaroid p {
+    color: #67566b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+
+
+.photo1 {
+    transform: rotate(-5deg);
+}
+
+
+.photo2 {
+    transform: rotate(3deg);
+}
+
+
+.photo3 {
+    transform: rotate(-2deg);
+}
+
+
+.polaroid:hover {
+    transform: rotate(0deg) translateY(-12px);
+
+    box-shadow: 0 15px 30px rgba(100, 70, 110, 0.28);
+}
+
+
+.memory-message {
+    color: #ba709a;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-top: 60px;
+}
+
+
+.next-button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 35px;
+
+    background-color: #c88ebc;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.next-button:hover {
+    background-color: #ad76a4;
+
+    transform: translateY(-3px);
+}
+
+
+/* 반짝이 */
+
+.star {
+    position: absolute;
+
+    color: white;
+
+    opacity: 0.9;
+}
+
+
+.star1 {
+    top: 12%;
+    left: 10%;
+
+    font-size: 55px;
+}
+
+
+.star2 {
+    top: 20%;
+    right: 12%;
+
+    font-size: 70px;
+}
+
+
+.star3 {
+    bottom: 12%;
+    left: 15%;
+
+    font-size: 40px;
+}
+
+
+.star4 {
+    bottom: 10%;
+    right: 8%;
+
+    font-size: 60px;
+}
